@@ -56,6 +56,7 @@ const projects = [
       'TextUtils: Your ultimate text companion. A versatile tool offering text analysis, word counting, and conversion capabilities."',
     stack: ['JavaScript', 'HTML', 'CSS'],
     sourceCode: "https://github.com/krn1904/textutils",
+    livePreview: "https://krn1904.github.io/TextUtils/"
   },
   {
     name: 'Chat-Application',
