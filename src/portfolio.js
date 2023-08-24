@@ -62,7 +62,7 @@ const projects = [
     description:
       'Currently working on the chat-application. where people can come and chat with the friends.This will be implemented with"',
     stack: ['TypeScript', 'React'],
-    sourceCode: "https://github.com/krn1904/textutils",
+    sourceCode: "https://github.com/krn1904/Chat-app",
   },
  
 ]
