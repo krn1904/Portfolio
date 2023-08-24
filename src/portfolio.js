@@ -1,7 +1,7 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'https://rajshekhar26.github.io/cleanfolio',
-  title: 'Hey.',
+  homepage: 'https://krn1904.github.io/Portfolio',
+  title: 'Hey..',
 }
 
 const about = {
@@ -21,29 +21,43 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
+    name: 'Orbitium',
+    description:
+      'Orbitium is a Blockchain based crypto earning Application. You can earn from the Day one of registeration. There are multiple',
+    stack: ['Postgres', 'TypeScript', 'React', 'NodeJs', 'TypeORM', 'Blockchain'],
+  },
+  {
     name: 'Tic-Tac-toe',
     description:
       'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    stack: [ 'TypeScript', 'React'],
+    sourceCode: 'https://github.com/krn1904/Tic-Tac-Toe',
+    // livePreview: 'https://github.com',
   },
   {
     name: 'Book-E-Sell',
     description:
       'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    stack: [ 'TypeScript', 'React'],
+    sourceCode: 'https://github.com/krn1904/Book-management',
+    // livePreview: 'https://github.com',
   },
   {
     name: 'Currency Converter',
     description:
       'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
     stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    sourceCode: 'https://github.com/krn1904/CurrencyConverter', 
+    // livePreview: 'https://github.com',
   },
+  {
+    name: 'TextUtils - It is a text analyzer, word counter and converter',
+    description:
+      '',
+    stack: ['SASS', 'TypeScript', 'React'],
+    sourceCode: "https://github.com/krn1904/textutils",
+  },
+ 
 ]
 
 const skills = [
@@ -52,13 +66,13 @@ const skills = [
   'HTML',
   'CSS',
   'JavaScript',
-  'React',
-  'java',
-  'Git',
   'TypeScript',
+  'React',
   'NodeJs',
+  'java',
+  'Blockchain',
   'Postgres',
-  'TypeORM'
+  'TypeORM',
 ]
 
 const contact = {
