@@ -12,7 +12,7 @@ const about = {
     "Highly Motivated toward my goal and eager to contribute my knowledge to the industry and improve myself for the better future of the company and myself.",
   resume: '',
   social: {
-    linkedin: 'https://www.linkedin.com/in/karansoni8349371b7/',
+    linkedin: 'https://www.linkedin.com/in/karanssoni/',
     github: 'https://github.com/krn1904',
   },
 }
