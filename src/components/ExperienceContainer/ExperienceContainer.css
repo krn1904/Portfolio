@@ -1,0 +1,64 @@
+.experience {
+    margin-bottom: 2rem;
+    text-align: center; /* Centers the text */
+  }
+  
+  .experience__description {
+    margin: 1rem 0;
+  }
+  
+  .experience__details {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+  
+  .experience__details-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .experience__dates {
+    font-style: italic;
+    color: #666; /* Adjust the color as needed */
+    margin-bottom: 10px;
+  }
+  
+  .experience__details {
+    margin-bottom: 20px;
+  }
+  
+  .experience__details-item {
+    margin-bottom: 10px;
+  }
+  
+  .experience__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap as needed */
+  }
+  
+  .experience__skill {
+    background-color: #f0f0f0; /* Adjust the background color as needed */
+    border: 1px solid #ccc; /* Adjust the border as needed */
+    border-radius: 4px;
+    padding: 10px; /* Adjust the padding as needed */
+    text-align: center;
+    min-width: 100px; /* Adjust the min-width as needed */
+    min-height: 100px; /* Adjust the min-height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a 3D effect */
+  }
+
+.experience__description{
+  max-width: 450px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.experience_skills__list-item{
+  margin: 0.5em;
+}
+  

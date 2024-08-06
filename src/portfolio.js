@@ -17,6 +17,29 @@ const about = {
   },
 }
 
+const experiences = [
+{
+  title : 'Software Developer',
+  company : 'Knackroot Technolabs LLP',
+  startDate: 'January 2023',
+  endDate: 'June 2023',
+  description: "Managed the development of a blockchain-based application for crypto earnings",
+  details: [
+    'React','React Native','Nodejs', 'Postgress', 'Blockchain'
+  ]
+},
+{
+  title : 'Associate Engineer',
+  company : 'Cygnet Digital',
+  startDate: 'September 2023',
+  endDate: 'July 2024',
+  description: "Contributed to a GST tax product in Vue.js by utilizing Vuex for state management, enhancing custom components, and replacing a library dependency with a custom solution.",
+  details: [
+    'Vuejs', 'Vuex', 'Javascript', 
+  ]
+}
+]
+
 const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
@@ -62,8 +85,9 @@ const projects = [
     name: 'Chat-Application',
     description:
       'Currently working on the chat-application. where people can come and chat with the friends.This will be implemented with"',
-    stack: ['TypeScript', 'React'],
+    stack: ['Javascript', 'React'],
     sourceCode: "https://github.com/krn1904/Chat-app",
+    livePreview: "https://chatapp-frontend-5pvz.onrender.com"
   },
  
 ]
@@ -71,16 +95,17 @@ const projects = [
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
-  'HTML',
-  'CSS',
   'JavaScript',
   'TypeScript',
   'React',
+  'vueJs',
   'NodeJs',
-  'java',
-  'Blockchain',
+  'HTML',
+  'CSS',
   'Postgres',
   'TypeORM',
+  'java',
+  'Blockchain',
 ]
 
 const contact = {
@@ -88,8 +113,4 @@ const contact = {
   email: 'Karanssoni2002@gmail.com',
 }
 
-const workExperience = {
-
-}
-
-export { header, about, projects, skills, contact }
+export { header, about, experiences, projects, skills, contact }
