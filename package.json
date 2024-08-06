@@ -2,7 +2,7 @@
   "name": "Portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://krn1904.github.io/Portfolio",
+  "homepage": "",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
