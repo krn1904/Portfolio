@@ -1,6 +1,6 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'https://krn1904.github.io/Portfolio',
+  homepage: process.env.REACT_APP_PORTFOLIOURL,
   title: 'Hey!',
 }
 
@@ -79,7 +79,7 @@ const projects = [
       'TextUtils: Your ultimate text companion. A versatile tool offering text analysis, word counting, and conversion capabilities."',
     stack: ['JavaScript', 'HTML', 'CSS'],
     sourceCode: "https://github.com/krn1904/textutils",
-    livePreview: "https://krn1904.github.io/TextUtils/"
+    livePreview: process.env.REACT_APP_TEXTUTILSURL
   },
   {
     name: 'Chat-Application',
@@ -87,7 +87,7 @@ const projects = [
       'Currently working on the chat-application. where people can come and chat with the friends.This will be implemented with"',
     stack: ['Javascript', 'React'],
     sourceCode: "https://github.com/krn1904/Chat-app",
-    livePreview: "https://chatapp-frontend-5pvz.onrender.com"
+    livePreview: process.env.REACT_APP_CHATAPPFEURL
   },
  
 ]
