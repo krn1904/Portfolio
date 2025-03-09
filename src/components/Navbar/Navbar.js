@@ -66,6 +66,16 @@ const Navbar = () => {
             </a>
           </li>
         ) : null}
+
+        <li className='nav__list-item'>
+          <a
+            href='#blogs'
+            onClick={toggleNavList}
+            className='link link--nav'
+          >
+            Blogs
+          </a>
+        </li>
       </ul>
 
       <button
