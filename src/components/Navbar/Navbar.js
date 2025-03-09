@@ -1,10 +1,10 @@
 import { useContext, useState } from 'react'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
+import Brightness2Icon from '@mui/icons-material/Brightness2'
+import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 import { ThemeContext } from '../../contexts/theme'
-import { projects, skills, contact } from '../../portfolio'
+import { projects, skills, contact, experiences } from '../../portfolio'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -19,6 +19,18 @@ const Navbar = () => {
         style={{ display: showNavList ? 'flex' : null }}
         className='nav__list'
       >
+        {experiences.length ? (
+          <li className='nav__list-item'>
+            <a
+              href='#experiences'
+              onClick={toggleNavList}
+              className='link link--nav'
+            >
+              Experience
+            </a>
+          </li>
+        ) : null}
+        
         {projects.length ? (
           <li className='nav__list-item'>
             <a

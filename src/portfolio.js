@@ -1,7 +1,7 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'https://rajshekhar26.github.io/cleanfolio',
-  title: 'Hey.',
+  homepage: process.env.REACT_APP_PORTFOLIOURL,
+  title: 'Hey!',
 }
 
 const about = {
@@ -12,53 +12,100 @@ const about = {
     "Highly Motivated toward my goal and eager to contribute my knowledge to the industry and improve myself for the better future of the company and myself.",
   resume: '',
   social: {
-    linkedin: 'https://www.linkedin.com/in/karansoni8349371b7/',
+    linkedin: 'https://www.linkedin.com/in/karanssoni/',
     github: 'https://github.com/krn1904',
   },
 }
+
+const experiences = [
+{
+  title : 'Software Developer',
+  company : 'Knackroot Technolabs LLP',
+  startDate: 'January 2023',
+  endDate: 'June 2023',
+  description: "Managed the development of a blockchain-based application for crypto earnings",
+  details: [
+    'React','React Native','Nodejs', 'Postgress', 'Blockchain'
+  ]
+},
+{
+  title : 'Associate Engineer',
+  company : 'Cygnet Digital',
+  startDate: 'September 2023',
+  endDate: 'July 2024',
+  description: "Contributed to a GST tax product in Vue.js by utilizing Vuex for state management, enhancing custom components, and replacing a library dependency with a custom solution.",
+  details: [
+    'Vuejs', 'Vuex', 'Javascript', 
+  ]
+}
+]
 
 const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
+    name: 'Orbitium',
+    description:
+      'Orbitium is a Blockchain based crypto earning Application. You can earn from the Day one of registration. There are multiple',
+    stack: ['Postgres', 'TypeScript', 'React', 'NodeJs', 'TypeORM', 'Blockchain'],
+  },
+  {
     name: 'Tic-Tac-toe',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      "Built in Java using Android Studio, my project is a classic Tic-Tac-Toe game. It's a two-player game designed for fun and entertainment.",
+    stack: [ 'Java', 'Android-Studio'],
+    sourceCode: 'https://github.com/krn1904/Tic-Tac-Toe',
+    // livePreview: 'https://github.com',
   },
   {
     name: 'Book-E-Sell',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      "Introducing 'Book-e-Sell,' a library management project that brings all available books to one convenient platform.",
+    stack: [ 'React','Nodejs','mongoDb'],
+    sourceCode: 'https://github.com/krn1904/Book-management',
+    // livePreview: 'https://github.com',
   },
   {
     name: 'Currency Converter',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'Explore the Currency Converter project, a tool that simplifies currency conversion for a specific set of currencies',
+    stack: ['Android-Studio', 'Java'],
+    sourceCode: 'https://github.com/krn1904/CurrencyConverter', 
+    // livePreview: 'https://github.com',
   },
+  {
+    name: 'TextUtils',
+    description:
+      'TextUtils: Your ultimate text companion. A versatile tool offering text analysis, word counting, and conversion capabilities."',
+    stack: ['JavaScript', 'HTML', 'CSS'],
+    sourceCode: "https://github.com/krn1904/textutils",
+    livePreview: process.env.REACT_APP_TEXTUTILSURL
+  },
+  {
+    name: 'Chat-Application',
+    description:
+      'Currently working on the chat-application. where people can come and chat with the friends.This will be implemented with"',
+    stack: ['Javascript', 'React'],
+    sourceCode: "https://github.com/krn1904/Chat-app",
+    livePreview: process.env.REACT_APP_CHATAPPFEURL
+  },
+ 
 ]
 
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'vueJs',
+  'NodeJs',
   'HTML',
   'CSS',
-  'JavaScript',
-  'React',
-  'java',
-  'Git',
-  'TypeScript',
-  'NodeJs',
   'Postgres',
-  'TypeORM'
+  'TypeORM',
+  'java',
+  'Blockchain',
 ]
 
 const contact = {
@@ -66,4 +113,4 @@ const contact = {
   email: 'Karanssoni2002@gmail.com',
 }
 
-export { header, about, projects, skills, contact }
+export { header, about, experiences, projects, skills, contact }
