@@ -25,7 +25,9 @@ const App = () => {
           <Experience />
           <Projects />
           <Skills />
-          <Blogs />
+          {/* comment out to move changes of experience section(removing knackroot) 
+          and default theme set to dark on the prod. then can uncomment after verifying. */}
+          {/* <Blogs />   */}
           <Contact />
         </main>
 
