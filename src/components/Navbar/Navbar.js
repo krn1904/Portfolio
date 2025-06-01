@@ -66,8 +66,9 @@ const Navbar = () => {
             </a>
           </li>
         ) : null}
-
-        <li className='nav__list-item'>
+        {/* comment out to move changes of experience section(removing knackroot) 
+          and default theme set to dark on the prod. then can uncomment after verifying. */}  
+        {/* <li className='nav__list-item'>
           <a
             href='#blogs'
             onClick={toggleNavList}
@@ -75,7 +76,7 @@ const Navbar = () => {
           >
             Blogs
           </a>
-        </li>
+        </li> */}
       </ul>
 
       <button
