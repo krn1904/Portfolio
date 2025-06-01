@@ -18,16 +18,16 @@ const about = {
 }
 
 const experiences = [
-{
-  title : 'Software Developer',
-  company : 'Knackroot Technolabs LLP',
-  startDate: 'January 2023',
-  endDate: 'June 2023',
-  description: "Managed the development of a blockchain-based application for crypto earnings",
-  details: [
-    'React','React Native','Nodejs', 'Postgress', 'Blockchain'
-  ]
-},
+// {
+//   title : 'Software Developer',
+//   company : 'Knackroot Technolabs LLP',
+//   startDate: 'January 2023',
+//   endDate: 'June 2023',
+//   description: "Managed the development of a blockchain-based application for crypto earnings",
+//   details: [
+//     'React','React Native','Nodejs', 'Postgress', 'Blockchain'
+//   ]
+// },
 {
   title : 'Associate Engineer',
   company : 'Cygnet Digital',
