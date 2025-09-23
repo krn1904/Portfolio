@@ -11,6 +11,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Portfolio</title>
+    <script>
+      // Debug: Log domain and timestamp
+      console.log('Early script running on:', window.location.hostname, 'at', new Date().toISOString());
+      
+      // Prevent theme flash by reading localStorage before page renders
+      (function() {
+        try {
+          var theme = localStorage.getItem('themeName');
+          console.log('localStorage theme:', theme);
+          
+          if (theme === 'light') {
+            document.documentElement.classList.add('light');
+            console.log('Applied light theme');
+          } else {
+            // Default to dark theme if no theme is saved or if theme is 'dark'
+            document.documentElement.classList.add('dark');
+            console.log('Applied dark theme (default)');
+          }
+        } catch (e) {
+          // Fallback to dark theme if localStorage is not available
+          document.documentElement.classList.add('dark');
+          console.log('Applied dark theme (fallback due to error:', e.message, ')');
+        }
+        
+        // Also set default CSS variables immediately to prevent flash
+        var root = document.documentElement;
+        if (!root.classList.contains('light')) {
+          root.style.setProperty('--clr-bg', '#23283e');
+          root.style.setProperty('--clr-bg-alt', '#2a2f4c');
+          root.style.setProperty('--clr-fg', '#bdbddd');
+          root.style.setProperty('--clr-fg-alt', '#cdcdff');
+          root.style.setProperty('--clr-primary', '#90a0d9');
+          console.log('Set dark CSS variables');
+        }
+        
+        console.log('Final documentElement classes:', document.documentElement.className);
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

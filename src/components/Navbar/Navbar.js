@@ -13,89 +13,58 @@ const Navbar = () => {
 
   const toggleNavList = () => setShowNavList(!showNavList)
 
+  const navLinks = [
+    { label: 'About', href: '#about', show: true },
+    { label: 'Experience', href: '#experiences', show: experiences.length },
+    { label: 'Projects', href: '#projects', show: projects.length },
+    { label: 'Skills', href: '#skills', show: skills.length },
+    { label: 'Contact', href: '#contact', show: contact.email },
+  ].filter((link) => link.show)
+
   return (
-    <nav className='center nav'>
-      <ul
-        style={{ display: showNavList ? 'flex' : null }}
-        className='nav__list'
-      >
-        {experiences.length ? (
-          <li className='nav__list-item'>
+    <nav className='nav'>
+      <ul className={`nav__list ${showNavList ? 'nav__list--active' : ''}`}>
+        {navLinks.map((link) => (
+          <li key={link.href} className='nav__list-item'>
             <a
-              href='#experiences'
+              href={link.href}
               onClick={toggleNavList}
               className='link link--nav'
             >
-              Experience
+              {link.label}
             </a>
           </li>
-        ) : null}
-        
-        {projects.length ? (
-          <li className='nav__list-item'>
-            <a
-              href='#projects'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
-              Projects
-            </a>
-          </li>
-        ) : null}
-
-        {skills.length ? (
-          <li className='nav__list-item'>
-            <a
-              href='#skills'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
-              Skills
-            </a>
-          </li>
-        ) : null}
-
-        {contact.email ? (
-          <li className='nav__list-item'>
-            <a
-              href='#contact'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
-              Contact
-            </a>
-          </li>
-        ) : null}
-        {/* comment out to move changes of experience section(removing knackroot) 
-          and default theme set to dark on the prod. then can uncomment after verifying. */}  
-        {/* <li className='nav__list-item'>
-          <a
-            href='#blogs'
-            onClick={toggleNavList}
-            className='link link--nav'
-          >
-            Blogs
-          </a>
-        </li> */}
+        ))}
       </ul>
 
-      <button
-        type='button'
-        onClick={toggleTheme}
-        className='btn btn--icon nav__theme'
-        aria-label='toggle theme'
-      >
-        {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
-      </button>
+      <div className='nav__actions'>
+        <button
+          type='button'
+          onClick={toggleTheme}
+          className='btn btn--icon nav__theme'
+          aria-label='toggle theme'
+        >
+          {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
+        </button>
 
-      <button
-        type='button'
-        onClick={toggleNavList}
-        className='btn btn--icon nav__hamburger'
-        aria-label='toggle navigation'
-      >
-        {showNavList ? <CloseIcon /> : <MenuIcon />}
-      </button>
+        <button
+          type='button'
+          onClick={toggleNavList}
+          className='btn btn--icon nav__hamburger'
+          aria-label='toggle navigation'
+        >
+          {showNavList ? <CloseIcon /> : <MenuIcon />}
+        </button>
+      </div>
+
+      {showNavList ? (
+        <button
+          type='button'
+          className='nav__backdrop'
+          onClick={toggleNavList}
+          aria-label='close navigation'
+        />
+      ) : null}
     </nav>
   )
 }

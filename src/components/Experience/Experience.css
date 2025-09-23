@@ -1,27 +1,22 @@
 .experiences {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.experiences__timeline {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 2.75rem;
+  margin-top: 3rem;
 }
 
-.experiences__grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem; /* Adjusts the spacing between items */
-  width: 100%; /* Ensures the container takes up the full width */
-  max-width: 1200px; /* Limits the maximum width of the container */
-  flex-wrap: wrap; /* Allows wrapping of items on smaller screens */
-  margin: 0 auto; /* Centers the grid within the container */
-}
+@media (max-width: 600px) {
+  .experiences {
+    padding-bottom: 1.5rem;
+  }
 
-.experience {
-  flex: 0 1 300px; /* Ensures flexible sizing and minimum width */
-  max-width: 300px; /* Fixes the maximum width */
-  box-sizing: border-box;
-}
-
-.section__title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  .experiences__timeline {
+    gap: 2.25rem;
+    margin-top: 2.5rem;
+  }
 }

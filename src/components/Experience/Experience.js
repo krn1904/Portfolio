@@ -9,10 +9,15 @@ const Experiences = () => {
   return (
     <section id='experiences' className='section experiences'>
       <h2 className='section__title'>Experience</h2>
+      <p className='section__subtitle'>Shaping products and teams across scaling startups.</p>
 
-      <div className='experiences__grid'>
-        {experiences.map((experience) => (
-          <ExperienceContainer key={uniqid()} experience={experience} />
+      <div className='experiences__timeline'>
+        {experiences.map((experience, index) => (
+          <ExperienceContainer
+            key={uniqid()}
+            experience={experience}
+            isLast={index === experiences.length - 1}
+          />
         ))}
       </div>
     </section>

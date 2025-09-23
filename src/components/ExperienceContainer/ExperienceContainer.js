@@ -1,23 +1,32 @@
 import uniqid from 'uniqid'
 import './ExperienceContainer.css'
 
-const ExperienceContainer = ({ experience }) => (
-  <div className='experience'>
-    <h4>{experience.title}</h4>
-    <br></br>
-    <p className='experience__company'>{experience.company}</p>
-    <p className='experience__dates'>
-      {experience.startDate} - {experience.endDate}
-    </p>
-    <p className='experience__description'>{experience.description}</p>
-    <ul className='experience__description'>
-      {experience.details.map((detail) => (
-        <li key={uniqid()} className='experience_skills__list-item btn btn--plain'>
-          {detail}
-        </li>
-      ))}
-    </ul>
-  </div>
+const ExperienceContainer = ({ experience, isLast = false }) => (
+  <article className='experience-card'>
+    <div className='experience-card__rail'>
+      <span className='experience-card__dot' />
+      {!isLast ? <span className='experience-card__line' /> : null}
+    </div>
+
+    <div className='experience-card__content'>
+      <span className='experience-card__period'>
+        {experience.startDate} — {experience.endDate}
+      </span>
+      <h3 className='experience-card__title'>{experience.title}</h3>
+      <p className='experience-card__company'>{experience.company}</p>
+      <p className='experience-card__description'>{experience.description}</p>
+
+      {experience.details?.length ? (
+        <ul className='experience-card__tags'>
+          {experience.details.map((detail) => (
+            <li key={uniqid()} className='btn btn--plain experience-card__tag'>
+              {detail}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
+  </article>
 )
 
 export default ExperienceContainer
