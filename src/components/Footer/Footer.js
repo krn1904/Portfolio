@@ -1,14 +1,17 @@
+import { about } from '../../portfolio'
 import './Footer.css'
 
-const Footer = () => (
-  <footer className='footer'>
-    <a
-      // href='https://github.com/krn1904/portfolio'
-      className='link footer__link'
-    >
-      Created By Karan Soni
-    </a>
-  </footer>
-)
+const Footer = () => {
+  const year = new Date().getFullYear()
+  const name = about.name || 'Karan Soni'
+
+  return (
+    <footer className='footer'>
+      <p className='footer__copy'>
+        © {year} {name}. Designed &amp; built with curiosity.
+      </p>
+    </footer>
+  )
+}
 
 export default Footer
