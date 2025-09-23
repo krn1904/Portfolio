@@ -60,7 +60,7 @@
   box-shadow: 0 16px 30px rgba(5, 12, 48, 0.26);
 }
 
-.nav__hamburger {
+.nav__actions .nav__hamburger {
   display: none;
   width: 2.4rem;
   height: 2.4rem;
@@ -106,8 +106,8 @@
     letter-spacing: 0.35em;
   }
 
-  .nav__hamburger {
-    display: flex;
+  .nav__actions .nav__hamburger {
+    display: inline-flex;
     z-index: 13;
   }
 

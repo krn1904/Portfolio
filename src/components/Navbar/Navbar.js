@@ -11,7 +11,12 @@ const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
-  const toggleNavList = () => setShowNavList(!showNavList)
+  const toggleNavList = () => setShowNavList((prev) => !prev)
+  const handleNavLinkClick = () => {
+    if (showNavList) {
+      setShowNavList(false)
+    }
+  }
 
   const navLinks = [
     { label: 'About', href: '#about', show: true },
@@ -28,7 +33,7 @@ const Navbar = () => {
           <li key={link.href} className='nav__list-item'>
             <a
               href={link.href}
-              onClick={toggleNavList}
+              onClick={handleNavLinkClick}
               className='link link--nav'
             >
               {link.label}
