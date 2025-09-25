@@ -1,7 +1,7 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: process.env.REACT_APP_PORTFOLIOURL,
-  title: 'Hey!',
+  title: 'Hey!', // can be removed if we are using KS as the left header text
 }
 
 const about = {
@@ -10,7 +10,10 @@ const about = {
   role: 'Software Developer',
   description:
     "Highly Motivated toward my goal and eager to contribute my knowledge to the industry and improve myself for the better future of the company and myself.",
-  resume: '',
+  // Place your resume file inside public/assets and keep this path in sync
+  resume: '/assets/karan-soni-resume.pdf',
+  // Place your headshot inside public/assets using this filename
+  photo: '/assets/karan-soni.jpg',
   social: {
     linkedin: 'https://www.linkedin.com/in/karanssoni/',
     github: 'https://github.com/krn1904',
