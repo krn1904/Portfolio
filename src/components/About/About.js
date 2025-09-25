@@ -1,20 +1,21 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import { about, experiences, projects, contact } from '../../portfolio'
+import { about, contact } from '../../portfolio'
 import './About.css'
 
+const getInitials = (value = '') =>
+  value
+    .split(' ')
+    .filter(Boolean)
+    .map((segment) => segment[0])
+    .slice(0, 2)
+    .join('')
+    .toUpperCase()
+
 const About = () => {
-  const { name, role, description, resume, social } = about
-  const stats = [
-    {
-      label: 'Professional Roles',
-      value: experiences.length,
-    },
-    {
-      label: 'Projects Delivered',
-      value: projects.length,
-    },
-  ].filter((stat) => stat.value)
+  const { name, role, description, resume, social, photo } = about
+  const photoSrc = photo?.trim()
+  const initials = name ? getInitials(name) : 'KS'
 
   return (
     <section className='section about' id='about'>
@@ -75,23 +76,12 @@ const About = () => {
 
         <div className='about__profile'>
           <div className='about__halo' />
-          <div className='about__profile-card'>
-            <p className='about__focus'>
-              Focused on building performant interfaces with thoughtful developer experience and crisp product outcomes.
-            </p>
-
-            {stats.length ? (
-              <div className='about__stats'>
-                {stats.map((stat) => (
-                  <div key={stat.label} className='about__stat'>
-                    <span className='about__stat-value'>
-                      {stat.value < 10 ? `0${stat.value}` : stat.value}
-                    </span>
-                    <span className='about__stat-label'>{stat.label}</span>
-                  </div>
-                ))}
-              </div>
-            ) : null}
+          <div className='about__photo'>
+            {photoSrc ? (
+              <img src={photoSrc} alt={`${name || 'Profile'} portrait`} />
+            ) : (
+              <span className='about__photo-initials'>{initials}</span>
+            )}
           </div>
         </div>
       </div>

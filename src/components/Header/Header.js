@@ -2,23 +2,49 @@ import { header, about } from '../../portfolio'
 import Navbar from '../Navbar/Navbar'
 import './Header.css'
 
+const getInitials = (value) =>
+  value
+    .split(' ')
+    .filter(Boolean)
+    .map((segment) => segment[0])
+    .slice(0, 2)
+    .join('')
+    .toUpperCase()
+
 const Header = () => {
   const { homepage, title } = header
-  const brandLabel = title || about.name || 'Portfolio'
-  const roleTagline = about.role ? `Portfolio · ${about.role}` : 'Portfolio'
+  const primaryLabel = about.name || title || 'Portfolio'
+  const profilePhoto = about.photo?.trim()
+  const initials = getInitials(primaryLabel)
 
   return (
     <header className='header'>
-      <div className='header__branding'>
+      <div className='header__identity'>
         {homepage ? (
-          <a href={homepage} className='header__logo'>
-            {brandLabel}
+          <a
+            href={homepage}
+            className='header__avatar-link'
+            aria-label={`${primaryLabel} homepage`}
+          >
+            <div className='header__avatar'>
+              {/* {profilePhoto ? (
+                <img src={profilePhoto} alt={`${primaryLabel} portrait`} />
+              ) : ( */}
+                <span className='header__avatar-initials'>{initials}</span>
+              {/* )} */}
+            </div>
           </a>
         ) : (
-          <span className='header__logo'>{brandLabel}</span>
+          <div className='header__avatar'>
+            {profilePhoto ? (
+              <img src={profilePhoto} alt={`${primaryLabel} portrait`} />
+            ) : (
+              <span className='header__avatar-initials'>{initials}</span>
+            )}
+          </div>
         )}
-        <span className='header__tagline'>{roleTagline}</span>
       </div>
+
       <Navbar />
     </header>
   )

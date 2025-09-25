@@ -96,6 +96,7 @@ main {
   backdrop-filter: blur(18px);
   position: relative;
   overflow: hidden;
+  scroll-margin-top: clamp(7rem, 16vh, 9rem);
 }
 
 .section::after {
