@@ -26,9 +26,18 @@ const experiences = [
   company : 'Knackroot Technolabs LLP',
   startDate: 'January 2023',
   endDate: 'June 2023',
-  description: "Managed the development of a blockchain-based application for crypto earnings",
+  description:
+    'Led full-stack delivery of a blockchain-based crypto earnings platform across web and mobile.',
+  highlights: [
+    'Managed the development of a blockchain-powered crypto earnings application.',
+    'Designed RESTful APIs and relational schemas with Node.js and PostgreSQL to support secure transactions.',
+    'Produced and deployed React Native builds for both Android and iOS ecosystems.',
+    'Partnered with designers, QA, and product stakeholders to refine features iteratively.',
+    'Owned deployment workflows and maintenance, safeguarding scalability in a fast-paced release cycle.',
+    'Conducted targeted testing and debugging sessions to elevate overall reliability.',
+  ],
   details: [
-    'React','React Native','Nodejs', 'Postgress', 'Blockchain'
+    'React', 'React Native', 'Node.js', 'PostgreSQL', 'REST APIs', 'Blockchain'
   ]
 },
 {
@@ -36,9 +45,17 @@ const experiences = [
   company : 'Cygnet Digital',
   startDate: 'September 2023',
   endDate: 'July 2024',
-  description: "Contributed to a GST tax product in Vue.js by utilizing Vuex for state management, enhancing custom components, and replacing a library dependency with a custom solution.",
+  description:
+    "Scaled a Vue.js GST taxation platform for enterprise compliance while modernising the front-end stack.",
+  highlights: [
+    'Extended the Vue.js GST compliance platform for enterprise filers, hardening high-volume workflows and accessibility.',
+    'Built a library of reusable Vue 3 components and composables, shrinking duplicate code across feature squads.',
+    'Implemented GST reporting modules with Vuex state, Axios-powered REST integrations, and real-time ledger updates.',
+    'Delivered a responsive homepage redesign with product and design, tuning layout performance and UI polish.',
+    'Co-led the migration from Vue 2 to Vue 3 on Vite, pairing rollout with structured defect triage to keep releases stable.',
+  ],
   details: [
-    'Vuejs', 'Vuex', 'Javascript', 
+    'Vue.js', 'Vuex', 'TypeScript', 'Vite', 'REST APIs', 'Component Systems'
   ]
 }
 ]
