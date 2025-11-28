@@ -112,8 +112,9 @@
   position: relative;
   z-index: 1;
   width: clamp(14rem, 28vw, 18rem);
-  aspect-ratio: 3 / 4;
-  border-radius: 36px;
+  height: clamp(14rem, 28vw, 18rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   border: 1px solid rgba(142, 161, 255, 0.2);
   overflow: hidden;
   box-shadow: var(--shadow-elevated);
@@ -129,7 +130,7 @@
   content: '';
   position: absolute;
   inset: 12px;
-  border-radius: 28px;
+  border-radius: 50%;
   border: 1px solid rgba(142, 161, 255, 0.15);
   pointer-events: none;
 }
@@ -139,6 +140,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 50%;
 }
 
 .about__photo-initials {
@@ -164,6 +166,7 @@
 
   .about__photo {
     width: clamp(13rem, 45vw, 16rem);
+    height: clamp(13rem, 45vw, 16rem);
   }
 }
 
@@ -174,6 +177,7 @@
 
   .about__photo {
     width: clamp(12rem, 70vw, 15rem);
-    border-radius: 28px;
+    height: clamp(12rem, 70vw, 15rem);
+    border-radius: 50%;
   }
 }
