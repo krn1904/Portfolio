@@ -13,7 +13,7 @@ const about = {
   // Place your resume file inside public/assets and keep this path in sync
   resume: '/assets/karan-soni-resume.pdf',
   // Place your headshot inside public/assets using this filename
-  photo: '/assets/karan-soni.jpg',
+  photo: '/assets/karan-soni.png',
   social: {
     linkedin: 'https://www.linkedin.com/in/karanssoni/',
     github: 'https://github.com/krn1904',
