@@ -89,6 +89,14 @@ const projects = [
     sourceCode: "https://github.com/krn1904/Chat-app",
     livePreview: process.env.REACT_APP_CHATAPPFEURL
   },
+  {
+    name: 'Work Hours Bot',
+    description:
+      'A Telegram bot for tracking work hours with natural language parsing. Supports bi-weekly pay cycles, category tracking, pay rate calculations, and automated daily reminders. Built for serverless deployment on Vercel with MongoDB backend.',
+    stack: ['Node.js', 'MongoDB', 'Telegram Bot API', 'Vercel', 'GitHub Actions'],
+    sourceCode: 'https://github.com/krn1904/workHoursBot',
+    // livePreview: process.env.TELEGRAM_BOT_USERNAME || '@your_work_hours_bot'
+  }
  
 ]
 
