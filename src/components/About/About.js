@@ -37,7 +37,7 @@ const About = () => {
 
           <div className='about__actions'>
             {resume ? (
-              <a href={resume} className='about__resume'>
+              <a href={resume} className='about__resume' target='_blank' rel='noopener noreferrer'>
                 <span className='btn btn--outline'>View résumé</span>
               </a>
             ) : null}
