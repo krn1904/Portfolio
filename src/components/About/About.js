@@ -78,7 +78,11 @@ const About = () => {
           <div className='about__halo' />
           <div className='about__photo'>
             {photoSrc ? (
-              <img src={photoSrc} alt={`${name || 'Profile'} portrait`} />
+              <img 
+                src={photoSrc} 
+                alt={`${name || 'Profile'} portrait`}
+                loading='lazy'
+              />
             ) : (
               <span className='about__photo-initials'>{initials}</span>
             )}
