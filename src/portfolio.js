@@ -1,3 +1,5 @@
+import profilePhoto from './assets/karan-soni-image.png'
+
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: process.env.REACT_APP_PORTFOLIOURL,
@@ -12,8 +14,8 @@ const about = {
     "Highly Motivated toward my goal and eager to contribute my knowledge to the industry and improve myself for the better future of the company and myself.",
   // Place your resume file inside public/assets and keep this path in sync
   resume: '/assets/karan-soni-resume.pdf',
-  // Place your headshot inside public/assets using this filename
-  photo: '/assets/karan-soni.png',
+  // Photo is imported from src/assets for optimization
+  photo: profilePhoto,
   social: {
     linkedin: 'https://www.linkedin.com/in/karanssoni/',
     github: 'https://github.com/krn1904',
