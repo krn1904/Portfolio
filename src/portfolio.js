@@ -12,7 +12,7 @@ const about = {
   role: 'Software Developer',
   description:
     "Highly Motivated toward my goal and eager to contribute my knowledge to the industry and improve myself for the better future of the company and myself.",
-  // Place your resume file inside public/assets and keep this path in sync
+  // Place resume file inside public/assets and keep this path in sync
   resume: '/assets/karan-soni-resume.pdf',
   // Photo is imported from src/assets for optimization
   photo: profilePhoto,
