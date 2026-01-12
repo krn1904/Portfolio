@@ -12,7 +12,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Removed native scroll-behavior to use custom JS implementation for consistent cross-browser behavior */
+  /* scroll-behavior: smooth; */
 }
 
 h1,

@@ -12,9 +12,26 @@ const Navbar = () => {
   const [showNavList, setShowNavList] = useState(false)
 
   const toggleNavList = () => setShowNavList((prev) => !prev)
-  const handleNavLinkClick = () => {
+  
+  const handleNavLinkClick = (e, href) => {
+    e.preventDefault()
     if (showNavList) {
       setShowNavList(false)
+    }
+    
+    // Custom smooth scroll with consistent behavior across browsers
+    const targetId = href.replace('#', '')
+    const targetElement = document.getElementById(targetId)
+    
+    if (targetElement) {
+      const headerOffset = 100 // Adjust offset for sticky header
+      const elementPosition = targetElement.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -33,7 +50,7 @@ const Navbar = () => {
           <li key={link.href} className='nav__list-item'>
             <a
               href={link.href}
-              onClick={handleNavLinkClick}
+              onClick={(e) => handleNavLinkClick(e, link.href)}
               className='link link--nav'
             >
               {link.label}
