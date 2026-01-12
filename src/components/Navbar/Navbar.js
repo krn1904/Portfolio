@@ -19,14 +19,13 @@ const Navbar = () => {
       setShowNavList(false)
     }
     
-    // Custom smooth scroll with consistent behavior across browsers
     const targetId = href.replace('#', '')
     const targetElement = document.getElementById(targetId)
     
     if (targetElement) {
-      const headerOffset = 100 // Adjust offset for sticky header
+      const headerOffset = 100
       const elementPosition = targetElement.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+      const offsetPosition = elementPosition + window.scrollY - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
