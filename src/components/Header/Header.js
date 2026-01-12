@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { header, about } from '../../portfolio'
 import Navbar from '../Navbar/Navbar'
 import './Header.css'
@@ -16,10 +17,12 @@ const Header = () => {
   const primaryLabel = about.name || title || 'Portfolio'
   const profilePhoto = about.photo?.trim()
   const initials = getInitials(primaryLabel)
+  const [imageError, setImageError] = useState(false)
 
   return (
     <header className='header'>
       <div className='header__identity'>
+        {/* Wrap avatar in link if homepage URL exists, otherwise render as static div */}
         {homepage ? (
           <a
             href={homepage}
@@ -27,17 +30,25 @@ const Header = () => {
             aria-label={`${primaryLabel} homepage`}
           >
             <div className='header__avatar'>
-              {/* {profilePhoto ? (
-                <img src={profilePhoto} alt={`${primaryLabel} portrait`} />
-              ) : ( */}
+              {profilePhoto && !imageError ? (
+                <img 
+                  src={profilePhoto} 
+                  alt={`${primaryLabel} portrait`}
+                  onError={() => setImageError(true)}
+                />
+              ) : (
                 <span className='header__avatar-initials'>{initials}</span>
-              {/* )} */}
+              )}
             </div>
           </a>
         ) : (
           <div className='header__avatar'>
-            {profilePhoto ? (
-              <img src={profilePhoto} alt={`${primaryLabel} portrait`} />
+            {profilePhoto && !imageError ? (
+              <img 
+                src={profilePhoto} 
+                alt={`${primaryLabel} portrait`}
+                onError={() => setImageError(true)}
+              />
             ) : (
               <span className='header__avatar-initials'>{initials}</span>
             )}
