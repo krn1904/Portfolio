@@ -79,22 +79,25 @@ const projects = [
     sourceCode: 'https://github.com/krn1904/Tic-Tac-Toe',
     // livePreview: 'https://github.com',
   },
-  {
-    name: 'Book-E-Sell',
-    description:
-      "Introducing 'Book-e-Sell,' a library management project that brings all available books to one convenient platform.",
-    stack: [ 'React','Nodejs','mongoDb'],
-    sourceCode: 'https://github.com/krn1904/Book-management',
-    // livePreview: 'https://github.com',
-  },
-  {
-    name: 'Currency Converter',
-    description:
-      'Explore the Currency Converter project, a tool that simplifies currency conversion for a specific set of currencies',
-    stack: ['Android-Studio', 'Java'],
-    sourceCode: 'https://github.com/krn1904/CurrencyConverter', 
-    // livePreview: 'https://github.com',
-  },
+  // removed project as it is not completed and not have any preeview. Think to add later when completed
+  // {
+  //   name: 'Book-E-Sell',
+  //   description:
+  //     "Introducing 'Book-e-Sell,' a library management project that brings all available books to one convenient platform.",
+  //   stack: [ 'React','Nodejs','mongoDb'],
+  //   sourceCode: 'https://github.com/krn1904/Book-management',
+  //   // livePreview: 'https://github.com',
+  // },
+
+  // removing as no need to show basic projects and not able to preview as well!
+  // {
+  //   name: 'Currency Converter',
+  //   description:
+  //     'Explore the Currency Converter project, a tool that simplifies currency conversion for a specific set of currencies',
+  //   stack: ['Android-Studio', 'Java'],
+  //   sourceCode: 'https://github.com/krn1904/CurrencyConverter', 
+  //   // livePreview: 'https://github.com',
+  // },
   {
     name: 'TextUtils',
     description:
