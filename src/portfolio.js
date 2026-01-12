@@ -23,6 +23,24 @@ const about = {
 }
 
 const experiences = [
+  {
+  title : 'Associate Engineer',
+  company : 'Cygnet Digital',
+  startDate: 'September 2023',
+  endDate: 'July 2024',
+  description:
+    "Scaled a Vue.js GST taxation platform for enterprise compliance while modernising the front-end stack.",
+  highlights: [
+    'Extended the Vue.js GST compliance platform for enterprise filers, hardening high-volume workflows and accessibility.',
+    'Built a library of reusable Vue 3 components and composables, shrinking duplicate code across feature squads.',
+    'Implemented GST reporting modules with Vuex state, Axios-powered REST integrations, and real-time ledger updates.',
+    'Delivered a responsive homepage redesign with product and design, tuning layout performance and UI polish.',
+    'Co-led the migration from Vue 2 to Vue 3 on Vite, pairing rollout with structured defect triage to keep releases stable.',
+  ],
+  details: [
+    'Vue.js', 'Vuex', 'TypeScript', 'Vite', 'REST APIs', 'Component Systems'
+  ]
+},
 {
   title : 'Software Developer',
   company : 'Knackroot Technolabs LLP',
@@ -40,24 +58,6 @@ const experiences = [
   ],
   details: [
     'React', 'React Native', 'Node.js', 'PostgreSQL', 'REST APIs', 'Blockchain'
-  ]
-},
-{
-  title : 'Associate Engineer',
-  company : 'Cygnet Digital',
-  startDate: 'September 2023',
-  endDate: 'July 2024',
-  description:
-    "Scaled a Vue.js GST taxation platform for enterprise compliance while modernising the front-end stack.",
-  highlights: [
-    'Extended the Vue.js GST compliance platform for enterprise filers, hardening high-volume workflows and accessibility.',
-    'Built a library of reusable Vue 3 components and composables, shrinking duplicate code across feature squads.',
-    'Implemented GST reporting modules with Vuex state, Axios-powered REST integrations, and real-time ledger updates.',
-    'Delivered a responsive homepage redesign with product and design, tuning layout performance and UI polish.',
-    'Co-led the migration from Vue 2 to Vue 3 on Vite, pairing rollout with structured defect triage to keep releases stable.',
-  ],
-  details: [
-    'Vue.js', 'Vuex', 'TypeScript', 'Vite', 'REST APIs', 'Component Systems'
   ]
 }
 ]
