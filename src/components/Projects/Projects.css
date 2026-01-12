@@ -13,10 +13,33 @@
 
 .projects__grid {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: clamp(1.5rem, 3vw, 2.3rem);
   margin-top: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.projects__grid > * {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 340px;
+  min-width: 260px;
+}
+
+/* Tablet and up: 2 columns */
+@media (min-width: 600px) {
+  .projects__grid > * {
+    width: calc(50% - clamp(1.5rem, 3vw, 2.3rem) / 2);
+  }
+}
+
+/* Desktop: 3 columns max */
+@media (min-width: 900px) {
+  .projects__grid > * {
+    width: calc(33.333% - clamp(1.5rem, 3vw, 2.3rem) * 2 / 3);
+    max-width: 360px;
+  }
 }
 
 @media (max-width: 600px) {
