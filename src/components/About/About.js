@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { about, contact } from '../../portfolio'
@@ -16,6 +17,7 @@ const About = () => {
   const { name, role, description, resume, social, photo } = about
   const photoSrc = photo?.trim()
   const initials = name ? getInitials(name) : 'KS'
+  const [imageError, setImageError] = useState(false)
 
   return (
     <section className='section about' id='about'>
@@ -77,11 +79,12 @@ const About = () => {
         <div className='about__profile'>
           <div className='about__halo' />
           <div className='about__photo'>
-            {photoSrc ? (
+            {photoSrc && !imageError ? (
               <img 
                 src={photoSrc} 
                 alt={`${name || 'Profile'} portrait`}
                 loading='lazy'
+                onError={() => setImageError(true)}
               />
             ) : (
               <span className='about__photo-initials'>{initials}</span>
