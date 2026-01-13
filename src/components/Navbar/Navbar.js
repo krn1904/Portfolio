@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import Brightness2Icon from '@mui/icons-material/Brightness2'
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -10,6 +10,18 @@ import './Navbar.css'
 const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (showNavList) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [showNavList])
 
   const toggleNavList = () => setShowNavList(!showNavList)
 
