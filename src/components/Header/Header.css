@@ -17,6 +17,15 @@
   isolation: isolate;
 }
 
+@media (max-width: 600px) {
+  .header {
+    overflow: visible;
+    isolation: auto;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
 .header::after {
   content: '';
   position: absolute;
