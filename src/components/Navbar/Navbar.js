@@ -11,81 +11,91 @@ const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
-  const toggleNavList = () => setShowNavList((prev) => !prev)
-  
-  const handleNavLinkClick = (e, href) => {
-    e.preventDefault()
-    if (showNavList) {
-      setShowNavList(false)
-    }
-    
-    const targetId = href.replace('#', '')
-    const targetElement = document.getElementById(targetId)
-    
-    if (targetElement) {
-      const headerOffset = 100
-      const elementPosition = targetElement.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.scrollY - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
-  }
-
-  const navLinks = [
-    { label: 'About', href: '#about', show: true },
-    { label: 'Experience', href: '#experiences', show: experiences.length },
-    { label: 'Projects', href: '#projects', show: projects.length },
-    { label: 'Skills', href: '#skills', show: skills.length },
-    { label: 'Contact', href: '#contact', show: contact.email },
-  ].filter((link) => link.show)
+  const toggleNavList = () => setShowNavList(!showNavList)
 
   return (
-    <nav className='nav'>
-      <ul className={`nav__list ${showNavList ? 'nav__list--active' : ''}`}>
-        {navLinks.map((link) => (
-          <li key={link.href} className='nav__list-item'>
+    <nav className='center nav'>
+      <ul
+        style={{ display: showNavList ? 'flex' : null }}
+        className='nav__list'
+      >
+        {experiences.length ? (
+          <li className='nav__list-item'>
             <a
-              href={link.href}
-              onClick={(e) => handleNavLinkClick(e, link.href)}
+              href='#experiences'
+              onClick={toggleNavList}
               className='link link--nav'
             >
-              {link.label}
+              Experience
             </a>
           </li>
-        ))}
+        ) : null}
+        
+        {projects.length ? (
+          <li className='nav__list-item'>
+            <a
+              href='#projects'
+              onClick={toggleNavList}
+              className='link link--nav'
+            >
+              Projects
+            </a>
+          </li>
+        ) : null}
+
+        {skills.length ? (
+          <li className='nav__list-item'>
+            <a
+              href='#skills'
+              onClick={toggleNavList}
+              className='link link--nav'
+            >
+              Skills
+            </a>
+          </li>
+        ) : null}
+
+        {contact.email ? (
+          <li className='nav__list-item'>
+            <a
+              href='#contact'
+              onClick={toggleNavList}
+              className='link link--nav'
+            >
+              Contact
+            </a>
+          </li>
+        ) : null}
+        {/* comment out to move changes of experience section(removing knackroot) 
+          and default theme set to dark on the prod. then can uncomment after verifying. */}  
+        {/* <li className='nav__list-item'>
+          <a
+            href='#blogs'
+            onClick={toggleNavList}
+            className='link link--nav'
+          >
+            Blogs
+          </a>
+        </li> */}
       </ul>
 
-      <div className='nav__actions'>
-        <button
-          type='button'
-          onClick={toggleTheme}
-          className='btn btn--icon nav__theme'
-          aria-label='toggle theme'
-        >
-          {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
-        </button>
+      <button
+        type='button'
+        onClick={toggleTheme}
+        className='btn btn--icon nav__theme'
+        aria-label='toggle theme'
+      >
+        {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
+      </button>
 
-        <button
-          type='button'
-          onClick={toggleNavList}
-          className='btn btn--icon nav__hamburger'
-          aria-label='toggle navigation'
-        >
-          {showNavList ? <CloseIcon /> : <MenuIcon />}
-        </button>
-      </div>
-
-      {showNavList ? (
-        <button
-          type='button'
-          className='nav__backdrop'
-          onClick={toggleNavList}
-          aria-label='close navigation'
-        />
-      ) : null}
+      <button
+        type='button'
+        onClick={toggleNavList}
+        className='btn btn--icon nav__hamburger'
+        aria-label='toggle navigation'
+      >
+        {showNavList ? <CloseIcon /> : <MenuIcon />}
+      </button>
     </nav>
   )
 }

@@ -24,6 +24,12 @@
 
 @media (max-width: 900px) {
   .scroll-top {
-    display: none;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .scroll-top a {
+    width: 2.75rem;
+    height: 2.75rem;
   }
 }
