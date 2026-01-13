@@ -107,13 +107,13 @@ const projects = [
     livePreview: process.env.REACT_APP_TEXTUTILSURL
   },
   {
-    name: 'Chat-Application',
+    name: 'Real-Time Chat Application',
     description:
-      'Currently working on the chat-application. where people can come and chat with the friends.This will be implemented with"',
-    stack: ['Javascript', 'React'],
-    sourceCode: "https://github.com/krn1904/Chat-app",
+      'Full-stack WebSocket chat app with room-based messaging, live connection status, and session-based message history. Features React frontend with custom hooks for connection management, Node.js/Express backend with WebSocket server, and automatic reconnection with message queuing.',
+    stack: ['React', 'Node.js', 'Express', 'WebSocket', 'MongoDB', 'Bootstrap'],
+    sourceCode: 'https://github.com/krn1904/Chat-app',
     livePreview: process.env.REACT_APP_CHATAPPFEURL
-  },
+  }
  
 ]
 
