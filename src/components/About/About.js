@@ -58,6 +58,8 @@ const About = () => {
                   href={social.github}
                   aria-label='github'
                   className='link link--icon'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <GitHubIcon fontSize='large' />
                 </a>
@@ -68,6 +70,8 @@ const About = () => {
                   href={social.linkedin}
                   aria-label='linkedin'
                   className='link link--icon'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <LinkedInIcon fontSize='large' />
                 </a>
