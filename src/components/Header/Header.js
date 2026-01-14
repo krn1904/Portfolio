@@ -34,6 +34,7 @@ const Header = () => {
                 <img 
                   src={profilePhoto} 
                   alt={`${primaryLabel} portrait`}
+                  loading='eager'
                   onError={() => setImageError(true)}
                 />
               ) : (
@@ -47,6 +48,7 @@ const Header = () => {
               <img 
                 src={profilePhoto} 
                 alt={`${primaryLabel} portrait`}
+                loading='eager'
                 onError={() => setImageError(true)}
               />
             ) : (
