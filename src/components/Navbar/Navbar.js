@@ -24,6 +24,12 @@ const Navbar = () => {
   }, [showNavList])
 
   const toggleNavList = () => setShowNavList(!showNavList)
+  
+  const closeNavList = () => {
+    if (showNavList) {
+      setShowNavList(false)
+    }
+  }
 
   return (
     <nav className='center nav'>
@@ -35,7 +41,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#experiences'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Experience
@@ -47,7 +53,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#projects'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Projects
@@ -59,7 +65,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#skills'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Skills
@@ -71,7 +77,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#contact'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Contact
