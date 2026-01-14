@@ -1,3 +1,62 @@
 .contact {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 20% -20% -50% 20%;
+  background: radial-gradient(circle, rgba(139, 164, 255, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.contact__card {
+  position: relative;
+  z-index: 1;
+  background: var(--clr-surface-strong);
+  border: 1px solid var(--clr-border);
+  border-radius: 32px;
+  padding: clamp(2.3rem, 4vw, 3.1rem);
+  text-align: center;
+  box-shadow: var(--shadow-elevated);
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.contact__title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  font-weight: 600;
+  color: var(--clr-fg);
+}
+
+.contact__copy {
+  margin: 0;
+  max-width: 36rem;
+  line-height: 1.8;
+  color: var(--clr-fg-alt);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact__cta {
+  min-width: 12rem;
+}
+
+@media (max-width: 600px) {
+  .contact__card {
+    padding: 2rem;
+  }
+
+  .contact__cta {
+    width: 100%;
+  }
 }

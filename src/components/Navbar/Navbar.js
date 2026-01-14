@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import Brightness2Icon from '@mui/icons-material/Brightness2'
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -11,7 +11,25 @@ const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (showNavList) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [showNavList])
+
   const toggleNavList = () => setShowNavList(!showNavList)
+  
+  const closeNavList = () => {
+    if (showNavList) {
+      setShowNavList(false)
+    }
+  }
 
   return (
     <nav className='center nav'>
@@ -23,7 +41,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#experiences'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Experience
@@ -35,7 +53,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#projects'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Projects
@@ -47,7 +65,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#skills'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Skills
@@ -59,7 +77,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#contact'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Contact
