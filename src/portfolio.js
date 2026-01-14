@@ -1,11 +1,8 @@
 import profilePhoto from './assets/karan-soni-image.png'
 
-import profilePhoto from './assets/karan-soni-image.png'
-
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: process.env.REACT_APP_PORTFOLIOURL,
-  title: 'Hey!', // can be removed if we are using KS as the left header text
   title: 'Hey!', // can be removed if we are using KS as the left header text
 }
 
@@ -19,10 +16,6 @@ const about = {
   resume: '/assets/karan-soni-resume.pdf',
   // Photo is imported from src/assets for optimization
   photo: profilePhoto,
-  // Place resume file inside public/assets and keep this path in sync
-  resume: '/assets/karan-soni-resume.pdf',
-  // Photo is imported from src/assets for optimization
-  photo: profilePhoto,
   social: {
     linkedin: 'https://www.linkedin.com/in/karanssoni/',
     github: 'https://github.com/krn1904',
@@ -30,7 +23,6 @@ const about = {
 }
 
 const experiences = [
-  {
   {
   title : 'Associate Engineer',
   company : 'Cygnet Digital',
@@ -64,36 +56,7 @@ const experiences = [
     'Owned deployment workflows and maintenance, safeguarding scalability in a fast-paced release cycle.',
     'Conducted targeted testing and debugging sessions to elevate overall reliability.',
   ],
-  description:
-    "Scaled a Vue.js GST taxation platform for enterprise compliance while modernising the front-end stack.",
-  highlights: [
-    'Extended the Vue.js GST compliance platform for enterprise filers, hardening high-volume workflows and accessibility.',
-    'Built a library of reusable Vue 3 components and composables, shrinking duplicate code across feature squads.',
-    'Implemented GST reporting modules with Vuex state, Axios-powered REST integrations, and real-time ledger updates.',
-    'Delivered a responsive homepage redesign with product and design, tuning layout performance and UI polish.',
-    'Co-led the migration from Vue 2 to Vue 3 on Vite, pairing rollout with structured defect triage to keep releases stable.',
-  ],
   details: [
-    'Vue.js', 'Vuex', 'TypeScript', 'Vite', 'REST APIs', 'Component Systems'
-  ]
-},
-{
-  title : 'Software Developer',
-  company : 'Knackroot Technolabs LLP',
-  startDate: 'January 2023',
-  endDate: 'June 2023',
-  description:
-    'Led full-stack delivery of a blockchain-based crypto earnings platform across web and mobile.',
-  highlights: [
-    'Managed the development of a blockchain-powered crypto earnings application.',
-    'Designed RESTful APIs and relational schemas with Node.js and PostgreSQL to support secure transactions.',
-    'Produced and deployed React Native builds for both Android and iOS ecosystems.',
-    'Partnered with designers, QA, and product stakeholders to refine features iteratively.',
-    'Owned deployment workflows and maintenance, safeguarding scalability in a fast-paced release cycle.',
-    'Conducted targeted testing and debugging sessions to elevate overall reliability.',
-  ],
-  details: [
-    'React', 'React Native', 'Node.js', 'PostgreSQL', 'REST APIs', 'Blockchain'
     'React', 'React Native', 'Node.js', 'PostgreSQL', 'REST APIs', 'Blockchain'
   ]
 }
@@ -135,25 +98,6 @@ const projects = [
   //   sourceCode: 'https://github.com/krn1904/CurrencyConverter', 
   //   // livePreview: 'https://github.com',
   // },
-  // removed project as it is not completed and not have any preeview. Think to add later when completed
-  // {
-  //   name: 'Book-E-Sell',
-  //   description:
-  //     "Introducing 'Book-e-Sell,' a library management project that brings all available books to one convenient platform.",
-  //   stack: [ 'React','Nodejs','mongoDb'],
-  //   sourceCode: 'https://github.com/krn1904/Book-management',
-  //   // livePreview: 'https://github.com',
-  // },
-
-  // removing as no need to show basic projects and not able to preview as well!
-  // {
-  //   name: 'Currency Converter',
-  //   description:
-  //     'Explore the Currency Converter project, a tool that simplifies currency conversion for a specific set of currencies',
-  //   stack: ['Android-Studio', 'Java'],
-  //   sourceCode: 'https://github.com/krn1904/CurrencyConverter', 
-  //   // livePreview: 'https://github.com',
-  // },
   {
     name: 'TextUtils',
     description:
@@ -164,11 +108,7 @@ const projects = [
   },
   {
     name: 'Real-Time Chat Application',
-    name: 'Real-Time Chat Application',
     description:
-      'Full-stack WebSocket chat app with room-based messaging, live connection status, and session-based message history. Features React frontend with custom hooks for connection management, Node.js/Express backend with WebSocket server, and automatic reconnection with message queuing.',
-    stack: ['React', 'Node.js', 'Express', 'WebSocket', 'MongoDB', 'Bootstrap'],
-    sourceCode: 'https://github.com/krn1904/Chat-app',
       'Full-stack WebSocket chat app with room-based messaging, live connection status, and session-based message history. Features React frontend with custom hooks for connection management, Node.js/Express backend with WebSocket server, and automatic reconnection with message queuing.',
     stack: ['React', 'Node.js', 'Express', 'WebSocket', 'MongoDB', 'Bootstrap'],
     sourceCode: 'https://github.com/krn1904/Chat-app',
