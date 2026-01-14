@@ -28,6 +28,8 @@ const ProjectContainer = ({ project }) => (
           href={project.sourceCode}
           aria-label='source code'
           className='project-card__link'
+          target='_blank'
+          rel='noopener'
         >
           <GitHubIcon fontSize='small' />
           <span>Code</span>
