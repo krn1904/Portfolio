@@ -115,6 +115,14 @@ const projects = [
     livePreview: process.env.REACT_APP_CHATAPPFEURL
   },
   {
+  name: 'Artify - Custom Artwork Marketplace',
+  description:
+    'Full-stack marketplace platform enabling artists to showcase portfolios and customers to commission custom artwork. Implements role-based authentication, paginated artwork browsing with tag filtering, favorites system, and complete commission lifecycle management from request to completion with status notifications.',
+  stack: ['Next.js', 'TypeScript', 'MongoDB', 'NextAuth', 'React Hook Form', 'Zod', 'Radix UI'],
+  sourceCode: 'https://github.com/krn1904/artify',
+  livePreview: process.env.REACT_APP_ARTIFYURL
+  },
+  {
     name: 'Work Hours Bot',
     description:
       'A Telegram bot for tracking work hours with natural language parsing. Supports bi-weekly pay cycles, category tracking, pay rate calculations, and automated daily reminders. Built for serverless deployment on Vercel with MongoDB backend.',
