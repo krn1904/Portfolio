@@ -65,20 +65,20 @@ const experiences = [
 const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
-  {
-    name: 'Orbitium',
-    description:
-      'Orbitium is a Blockchain based crypto earning Application. You can earn from the Day one of registration. There are multiple',
-    stack: ['Postgres', 'TypeScript', 'React', 'NodeJs', 'TypeORM', 'Blockchain'],
-  },
-  {
-    name: 'Tic-Tac-toe',
-    description:
-      "Built in Java using Android Studio, my project is a classic Tic-Tac-Toe game. It's a two-player game designed for fun and entertainment.",
-    stack: [ 'Java', 'Android-Studio'],
-    sourceCode: 'https://github.com/krn1904/Tic-Tac-Toe',
-    // livePreview: 'https://github.com',
-  },
+  // {
+  //   name: 'Orbitium',
+  //   description:
+  //     'Orbitium is a Blockchain based crypto earning Application. You can earn from the Day one of registration. There are multiple',
+  //   stack: ['Postgres', 'TypeScript', 'React', 'NodeJs', 'TypeORM', 'Blockchain'],
+  // },
+  // {
+  //   name: 'Tic-Tac-toe',
+  //   description:
+  //     "Built in Java using Android Studio, my project is a classic Tic-Tac-Toe game. It's a two-player game designed for fun and entertainment.",
+  //   stack: [ 'Java', 'Android-Studio'],
+  //   sourceCode: 'https://github.com/krn1904/Tic-Tac-Toe',
+  //   // livePreview: 'https://github.com',
+  // },
   // removed project as it is not completed and not have any preeview. Think to add later when completed
   // {
   //   name: 'Book-E-Sell',
@@ -98,13 +98,21 @@ const projects = [
   //   sourceCode: 'https://github.com/krn1904/CurrencyConverter', 
   //   // livePreview: 'https://github.com',
   // },
+  // {
+  //   name: 'TextUtils',
+  //   description:
+  //     'TextUtils: Your ultimate text companion. A versatile tool offering text analysis, word counting, and conversion capabilities."',
+  //   stack: ['JavaScript', 'HTML', 'CSS'],
+  //   sourceCode: "https://github.com/krn1904/textutils",
+  //   livePreview: process.env.REACT_APP_TEXTUTILSURL
+  // },
   {
-    name: 'TextUtils',
+    name: 'Artify - Custom Artwork Marketplace',
     description:
-      'TextUtils: Your ultimate text companion. A versatile tool offering text analysis, word counting, and conversion capabilities."',
-    stack: ['JavaScript', 'HTML', 'CSS'],
-    sourceCode: "https://github.com/krn1904/textutils",
-    livePreview: process.env.REACT_APP_TEXTUTILSURL
+      'Full-stack marketplace platform enabling artists to showcase portfolios and customers to commission custom artwork. Implements role-based authentication, paginated artwork browsing with tag filtering, favorites system, and complete commission lifecycle management from request to completion with status notifications.',
+    stack: ['Next.js', 'TypeScript', 'MongoDB', 'NextAuth', 'React Hook Form', 'Zod', 'Radix UI'],
+    sourceCode: 'https://github.com/krn1904/artify',
+    livePreview: process.env.REACT_APP_ARTIFYURL
   },
   {
     name: 'Real-Time Chat Application',
@@ -115,22 +123,21 @@ const projects = [
     livePreview: process.env.REACT_APP_CHATAPPFEURL
   },
   {
-  name: 'Artify - Custom Artwork Marketplace',
-  description:
-    'Full-stack marketplace platform enabling artists to showcase portfolios and customers to commission custom artwork. Implements role-based authentication, paginated artwork browsing with tag filtering, favorites system, and complete commission lifecycle management from request to completion with status notifications.',
-  stack: ['Next.js', 'TypeScript', 'MongoDB', 'NextAuth', 'React Hook Form', 'Zod', 'Radix UI'],
-  sourceCode: 'https://github.com/krn1904/artify',
-  livePreview: process.env.REACT_APP_ARTIFYURL
-  },
-  {
     name: 'Work Hours Bot',
     description:
       'A Telegram bot for tracking work hours with natural language parsing. Supports bi-weekly pay cycles, category tracking, pay rate calculations, and automated daily reminders. Built for serverless deployment on Vercel with MongoDB backend.',
     stack: ['Node.js', 'MongoDB', 'Telegram Bot API', 'Vercel', 'GitHub Actions'],
     sourceCode: 'https://github.com/krn1904/workHoursBot',
     // livePreview: process.env.TELEGRAM_BOT_USERNAME || '@your_work_hours_bot'
+  },
+  {
+    name: 'Music Subscription Platform - AWS',
+    description:
+      'A music subscription REST API deployed across three AWS architectures - EC2 (Nginx + PM2), ECS Fargate (Docker + ALB), and Lambda + API Gateway — covering IaaS, containerised, and serverless models. Features DynamoDB schema with composite sort keys, GSI and LSI, IAM least-privilege roles, and presigned URL access for private S3 assets.',
+    stack: ['React', 'Node.js', 'DynamoDB', 'S3', 'EC2', 'ECS Fargate', 'Lambda', 'Docker', 'AWS IAM'],
+    sourceCode: 'https://github.com/krn1904/music-backend',
+    // livePreview: 'your-deployed-url-here'
   }
- 
 ]
 
 const skills = [
@@ -141,12 +148,13 @@ const skills = [
   'React',
   'vueJs',
   'NodeJs',
+  'AWS',
   'HTML',
   'CSS',
   'Postgres',
   'TypeORM',
   'java',
-  'Blockchain',
+  'Blockchain'
 ]
 
 const contact = {
