@@ -114,6 +114,14 @@
   color: #ff9900;
 }
 
+.technology-icon[data-brand='Claude Code'] {
+  color: #d97757;
+}
+
+.technology-icon[data-brand='Codex'] {
+  color: var(--clr-secondary);
+}
+
 .technology-icon[data-brand='Next.js'],
 .technology-icon[data-brand='Express'],
 .technology-icon[data-brand='Radix UI'],

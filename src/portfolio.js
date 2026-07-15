@@ -141,20 +141,58 @@ const projects = [
 ]
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'vueJs',
-  'NodeJs',
-  'AWS',
-  'HTML',
-  'CSS',
-  'Postgres',
-  'TypeORM',
-  'java',
-  'Blockchain'
+  {
+    category: 'Languages & Frameworks',
+    sections: [
+      {
+        label: 'Languages',
+        items: ['JavaScript', 'TypeScript', 'Java', 'Python'],
+      },
+      {
+        label: 'Frameworks',
+        items: ['React', 'Vue.js', 'Next.js', 'Node.js', 'Express.js', 'Vite', 'React Native', 'Bootstrap'],
+      },
+    ],
+  },
+  {
+    category: 'Data & Infrastructure',
+    sections: [
+      {
+        label: 'Database',
+        items: ['PostgreSQL', 'MongoDB', 'DynamoDB'],
+      },
+      {
+        label: 'Cloud & DevOps',
+        items: ['AWS', 'S3', 'ECS Fargate', 'EC2', 'ECR', 'Docker', 'Vercel', 'Render', 'GitHub Actions'],
+      },
+    ],
+  },
+  {
+    category: 'APIs & Tools',
+    sections: [
+      {
+        label: 'APIs & Auth',
+        items: ['REST APIs', 'WebSockets', 'JWT'],
+      },
+      {
+        label: 'Tools',
+        items: ['Git', 'GitHub', 'Sourcetree'],
+      },
+    ],
+  },
+  {
+    category: 'AI & Tooling',
+    sections: [
+      {
+        label: 'AI Tools',
+        items: ['Cursor', 'Claude', 'ChatGPT', 'GitHub Copilot'],
+      },
+      {
+        label: 'AI Coding Agents',
+        items: ['Claude Code', 'Codex'],
+      },
+    ],
+  },
 ]
 
 const contact = {
