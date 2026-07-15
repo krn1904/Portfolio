@@ -107,6 +107,14 @@ const projects = [
   //   livePreview: process.env.REACT_APP_TEXTUTILSURL
   // },
   {
+    name: 'Brief - Personalized News',
+    description:
+      'Personalized, multi-source news aggregator that collects, cleans, deduplicates, clusters, and tags stories from RSS and different news sources. Uses Gemini AI for topic tagging and on-demand article summaries, with cached summaries shared across signed-in users. Learns from each user vote to update topic interests and rank a fresh, diverse feed by interest, freshness, and source variety.',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'NextAuth', 'Gemini AI', 'GitHub Actions'],
+    sourceCode: 'https://github.com/krn1904/News-Aggregator',
+    livePreview: process.env.REACT_APP_BRIEFURL
+  },
+  {
     name: 'Artify - Custom Artwork Marketplace',
     description:
       'Full-stack marketplace platform enabling artists to showcase portfolios and customers to commission custom artwork. Implements role-based authentication, paginated artwork browsing with tag filtering, favorites system, and complete commission lifecycle management from request to completion with status notifications.',
