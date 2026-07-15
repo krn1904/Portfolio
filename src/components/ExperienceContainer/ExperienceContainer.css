@@ -112,6 +112,9 @@
 }
 
 .experience-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
 }

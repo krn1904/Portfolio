@@ -1,5 +1,6 @@
 import uniqid from 'uniqid'
 import { skills } from '../../portfolio'
+import { TechnologyIcon } from '../TechnologyIcon/TechnologyIcon'
 import './Skills.css'
 
 const Skills = () => {
@@ -12,7 +13,8 @@ const Skills = () => {
       <ul className='skills__list'>
         {skills.map((skill) => (
           <li key={uniqid()} className='skills__list-item btn btn--plain'>
-            {skill}
+            <TechnologyIcon name={skill} />
+            <span>{skill}</span>
           </li>
         ))}
       </ul>

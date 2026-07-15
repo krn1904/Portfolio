@@ -1,79 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LaunchIcon from '@mui/icons-material/Launch'
-import { FaJava } from 'react-icons/fa'
-import {
-  SiBootstrap,
-  SiDocker,
-  SiExpress,
-  SiGithubactions,
-  SiJavascript,
-  SiMongodb,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPostgresql,
-  SiRadixui,
-  SiReact,
-  SiReacthookform,
-  SiTelegram,
-  SiTypescript,
-  SiVercel,
-  SiVuedotjs,
-  SiZod,
-} from 'react-icons/si'
-import { LuBlocks, LuBraces, LuCloud, LuCodeXml, LuNetwork, LuShieldCheck } from 'react-icons/lu'
-import dynamoDbLogo from '../../assets/technology-icons/Arch_Amazon-DynamoDB_32.svg'
-import ec2Logo from '../../assets/technology-icons/Arch_Amazon-EC2_32.svg'
-import ecsLogo from '../../assets/technology-icons/Arch_Amazon-Elastic-Container-Service_32.svg'
-import s3Logo from '../../assets/technology-icons/Arch_Amazon-Simple-Storage-Service_32.svg'
-import iamLogo from '../../assets/technology-icons/Arch_AWS-Identity-and-Access-Management_32.svg'
-import lambdaLogo from '../../assets/technology-icons/Arch_AWS-Lambda_32.svg'
+import { TechnologyIcon } from '../TechnologyIcon/TechnologyIcon'
 import './ProjectContainer.css'
-
-const stackIconMap = {
-  AWS: LuCloud,
-  Bootstrap: SiBootstrap,
-  Blockchain: LuBlocks,
-  Docker: SiDocker,
-  DynamoDB: dynamoDbLogo,
-  EC2: ec2Logo,
-  'ECS Fargate': ecsLogo,
-  Express: SiExpress,
-  'GitHub Actions': SiGithubactions,
-  Java: FaJava,
-  JavaScript: SiJavascript,
-  Lambda: lambdaLogo,
-  MongoDB: SiMongodb,
-  NextAuth: LuShieldCheck,
-  'Next.js': SiNextdotjs,
-  'Node.js': SiNodedotjs,
-  NodeJs: SiNodedotjs,
-  Postgres: SiPostgresql,
-  PostgreSQL: SiPostgresql,
-  'Radix UI': SiRadixui,
-  React: SiReact,
-  'React Hook Form': SiReacthookform,
-  'REST APIs': LuBraces,
-  S3: s3Logo,
-  'Telegram Bot API': SiTelegram,
-  TypeScript: SiTypescript,
-  Vercel: SiVercel,
-  'Vue.js': SiVuedotjs,
-  Vuex: SiVuedotjs,
-  WebSocket: LuNetwork,
-  'AWS IAM': iamLogo,
-  Zod: SiZod,
-}
-
-const StackIcon = ({ item }) => {
-  const Icon = stackIconMap[item]
-
-  if (typeof Icon === 'string') {
-    return <img src={Icon} alt='' className='project-card__stack-logo-image' />
-  }
-
-  const IconComponent = Icon || LuCodeXml
-  return <IconComponent aria-hidden='true' focusable='false' />
-}
 
 const getDescriptionPoints = (description = '') =>
   description
@@ -115,11 +43,8 @@ const ProjectContainer = ({ project }) => {
             <li
               key={`${project.name || 'project'}-${item}-${index}`}
               className='project-card__stack-item'
-              data-brand={item}
             >
-              <span className='project-card__stack-logo' aria-hidden='true'>
-                <StackIcon item={item} />
-              </span>
+              <TechnologyIcon name={item} />
               {item}
             </li>
           ))}
