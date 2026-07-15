@@ -24,6 +24,25 @@ const about = {
 
 const experiences = [
   {
+    title : 'Software Developer Intern',
+    company : 'Cornven POS · Capstone Project',
+    startDate: 'February 2025',
+    endDate: 'June 2025',
+    description:
+      'Extended a full-stack POS and rental-management platform from in-store operations into connected online selling for an artist cube store.',
+    highlights: [
+      'Integrated Shopify publishing, order/refund webhooks, sync logs, and inventory updates for online sales.',
+      'Built Stripe subscription gating for Shopify access with admin controls and lifecycle notifications.',
+      'Implemented product re-approval so live listings stay active while tenant edits await review.',
+      'Improved inventory reliability across POS and Shopify with transactional updates and failure logging.',
+      'Enhanced tenant and admin workflows for products, rentals, support messages, variants, and images.',
+      'Owned deployment setup, backend server configuration, database reset/migration, and domain configuration.',
+    ],
+    details: [
+      'Shopify', 'Stripe', 'React', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 
+    ]
+  },
+  {
   title : 'Associate Engineer',
   company : 'Cygnet Digital',
   startDate: 'September 2023',
