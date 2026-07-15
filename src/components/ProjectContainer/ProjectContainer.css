@@ -13,6 +13,10 @@
   overflow: hidden;
 }
 
+.project-card--live {
+  border-color: rgba(60, 231, 178, 0.26);
+}
+
 .project-card::before {
   content: '';
   position: absolute;
@@ -51,8 +55,12 @@
 }
 
 .project-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 0 0 auto;
   font-size: 0.65rem;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
@@ -61,11 +69,61 @@
   border: 1px solid rgba(60, 231, 178, 0.28);
 }
 
-.project-card__description {
+.project-card__details {
+  position: relative;
+  padding: 1rem 1rem 1rem 1.15rem;
+  border-radius: 18px;
+  background: rgba(139, 164, 255, 0.08);
+  border: 1px solid var(--clr-border);
+}
+
+.project-card__details::before {
+  content: '';
+  position: absolute;
+  inset: 1rem auto 1rem 0;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--clr-primary);
+}
+
+.project-card__details-label {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+}
+
+.project-card__description-list {
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card__description-item {
+  position: relative;
+  padding-left: 1.05rem;
   font-size: 0.95rem;
-  line-height: 1.75;
+  line-height: 1.65;
   color: var(--clr-fg-alt);
+}
+
+.project-card__description-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(139, 164, 255, 0.14);
+}
+
+.project-card__description-item + .project-card__description-item {
+  margin-top: 0.55rem;
 }
 
 .project-card__stack {
@@ -78,9 +136,110 @@
 }
 
 .project-card__stack-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
   font-size: 0.72rem;
+  font-weight: 700;
   letter-spacing: 0.06em;
-  padding: 0.48em 0.85em;
+  line-height: 1;
+  color: var(--clr-fg);
+  border-radius: 999px;
+  background: rgba(139, 164, 255, 0.1);
+  border: 1px solid var(--clr-border);
+  padding: 0.4em 0.82em 0.4em 0.42em;
+}
+
+.project-card__stack-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  color: var(--clr-primary);
+  background: color-mix(in srgb, currentColor 14%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  overflow: hidden;
+}
+
+.project-card__stack-logo svg {
+  width: 0.88rem;
+  height: 0.88rem;
+}
+
+.project-card__stack-logo-image {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+}
+
+.project-card__stack-item[data-brand='React'] .project-card__stack-logo {
+  color: #61dafb;
+}
+
+.project-card__stack-item[data-brand='TypeScript'] .project-card__stack-logo {
+  color: #3178c6;
+}
+
+.project-card__stack-item[data-brand='MongoDB'] .project-card__stack-logo {
+  color: #47a248;
+}
+
+.project-card__stack-item[data-brand='React Hook Form'] .project-card__stack-logo {
+  color: #ec5990;
+}
+
+.project-card__stack-item[data-brand='Zod'] .project-card__stack-logo {
+  color: #3e67b1;
+}
+
+.project-card__stack-item[data-brand='Node.js'] .project-card__stack-logo,
+.project-card__stack-item[data-brand='NodeJs'] .project-card__stack-logo {
+  color: #5fa04e;
+}
+
+.project-card__stack-item[data-brand='Bootstrap'] .project-card__stack-logo {
+  color: #7952b3;
+}
+
+.project-card__stack-item[data-brand='Telegram Bot API'] .project-card__stack-logo {
+  color: #26a5e4;
+}
+
+.project-card__stack-item[data-brand='GitHub Actions'] .project-card__stack-logo {
+  color: #2088ff;
+}
+
+.project-card__stack-item[data-brand='Docker'] .project-card__stack-logo {
+  color: #2496ed;
+}
+
+.project-card__stack-item[data-brand='JavaScript'] .project-card__stack-logo {
+  color: #f7df1e;
+}
+
+.project-card__stack-item[data-brand='Postgres'] .project-card__stack-logo,
+.project-card__stack-item[data-brand='PostgreSQL'] .project-card__stack-logo {
+  color: #4169e1;
+}
+
+.project-card__stack-item[data-brand='Vue.js'] .project-card__stack-logo,
+.project-card__stack-item[data-brand='Vuex'] .project-card__stack-logo {
+  color: #4fc08d;
+}
+
+.project-card__stack-item[data-brand='Java'] .project-card__stack-logo {
+  color: #e76f00;
+}
+
+.project-card__stack-item[data-brand='Next.js'] .project-card__stack-logo,
+.project-card__stack-item[data-brand='Express'] .project-card__stack-logo,
+.project-card__stack-item[data-brand='Radix UI'] .project-card__stack-logo,
+.project-card__stack-item[data-brand='Vercel'] .project-card__stack-logo {
+  color: var(--clr-fg);
 }
 
 .project-card__links {
@@ -110,6 +269,17 @@
 .project-card__link:hover {
   transform: translateY(-3px);
   border-color: rgba(139, 164, 255, 0.6);
+}
+
+.project-card__link--preview {
+  color: #061127;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+  border-color: rgba(60, 231, 178, 0.38);
+  box-shadow: 0 14px 28px rgba(60, 231, 178, 0.18);
+}
+
+.project-card__link--preview:hover {
+  border-color: rgba(60, 231, 178, 0.72);
 }
 
 @media (max-width: 480px) {
