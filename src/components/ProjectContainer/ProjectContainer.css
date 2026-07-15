@@ -1,13 +1,14 @@
 .project-card {
   position: relative;
-  padding: clamp(1.8rem, 3vw, 2.2rem);
-  border-radius: 28px;
+  min-height: 100%;
+  padding: clamp(1.65rem, 2.3vw, 2.15rem);
+  border-radius: 24px;
   background: var(--clr-surface-strong);
   border: 1px solid var(--clr-border);
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
-  gap: 1.35rem;
+  gap: 1.2rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
@@ -35,13 +36,17 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--clr-border);
 }
 
 .project-card__title {
   margin: 0;
-  font-size: 1.25rem;
+  max-width: 34rem;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
   font-weight: 600;
+  line-height: 1.35;
   color: var(--clr-fg);
 }
 
@@ -59,22 +64,23 @@
 .project-card__description {
   margin: 0;
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--clr-fg-alt);
 }
 
 .project-card__stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.55rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .project-card__stack-item {
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  padding: 0.48em 0.85em;
 }
 
 .project-card__links {
@@ -82,6 +88,8 @@
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.25rem;
 }
 
 .project-card__link {
@@ -107,5 +115,10 @@
 @media (max-width: 480px) {
   .project-card {
     padding: 1.6rem;
+  }
+
+  .project-card__header {
+    flex-direction: column;
+    gap: 0.8rem;
   }
 }

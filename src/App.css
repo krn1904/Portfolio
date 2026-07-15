@@ -9,6 +9,8 @@
 
 /* Default dark theme values - prevents light mode flash */
 :root {
+  --layout-max-width: 1500px;
+  --layout-gutter: clamp(2rem, 5vw, 5rem);
   --clr-bg: #070818;
   --clr-bg-soft: rgba(11, 15, 32, 0.75);
   --clr-surface: rgba(14, 18, 39, 0.42);
@@ -81,7 +83,7 @@
 }
 
 main {
-  width: min(1100px, calc(100% - 3rem));
+  width: min(var(--layout-max-width), calc(100% - var(--layout-gutter)));
   margin: 0 auto;
   padding-bottom: 6rem;
 }
