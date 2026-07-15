@@ -13,38 +13,22 @@
 
 .projects__grid {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: clamp(1.5rem, 3vw, 2.3rem);
-  margin-top: clamp(2.5rem, 4vw, 3.5rem);
-}
-
-.projects__grid > * {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 340px;
-  min-width: 260px;
-}
-
-/* Tablet and up: 2 columns */
-@media (min-width: 600px) {
-  .projects__grid > * {
-    width: calc(50% - clamp(1.5rem, 3vw, 2.3rem) / 2);
-  }
-}
-
-/* Desktop: 3 columns max */
-@media (min-width: 900px) {
-  .projects__grid > * {
-    width: calc(33.333% - clamp(1.5rem, 3vw, 2.3rem) * 2 / 3);
-    max-width: 360px;
-  }
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.35rem, 2vw, 2rem);
+  margin-top: clamp(2rem, 3vw, 2.8rem);
 }
 
 @media (max-width: 600px) {
   .projects::before {
     inset: 3% 25% auto 20%;
     height: 45%;
+  }
+}
+
+@media (max-width: 760px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
   }
 }

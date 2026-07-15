@@ -1,4 +1,5 @@
 import uniqid from 'uniqid'
+import { TechnologyIcon } from '../TechnologyIcon/TechnologyIcon'
 import './ExperienceContainer.css'
 
 const ExperienceContainer = ({ experience, isLast = false }) => {
@@ -40,6 +41,7 @@ const ExperienceContainer = ({ experience, isLast = false }) => {
           <ul className='experience-card__tags'>
             {experience.details.map((detail) => (
               <li key={uniqid()} className='btn btn--plain experience-card__tag'>
+                <TechnologyIcon name={detail} />
                 {detail}
               </li>
             ))}

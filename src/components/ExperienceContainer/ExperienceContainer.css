@@ -12,6 +12,7 @@
   align-items: flex-start;
   justify-content: center;
   width: 1.75rem;
+  align-self: stretch;
 }
 
 .experience-card__dot {
@@ -20,15 +21,15 @@
   border-radius: 50%;
   background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
   box-shadow: 0 0 18px rgba(139, 164, 255, 0.6);
-  margin-top: 0.65rem;
+  margin-top: 2rem;
   z-index: 2;
 }
 
 .experience-card__line {
   position: absolute;
-  top: 1.4rem;
+  top: 1.95rem;
+  bottom: 0;
   width: 0.14rem;
-  height: calc(100% - 0.4rem);
   background: linear-gradient(180deg, rgba(139, 164, 255, 0.4), rgba(60, 231, 178, 0.1));
   border-radius: 999px;
   z-index: 1;
@@ -112,6 +113,9 @@
 }
 
 .experience-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
 }

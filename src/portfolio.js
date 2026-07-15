@@ -24,6 +24,25 @@ const about = {
 
 const experiences = [
   {
+    title : 'Software Developer',
+    company : 'Vision Verse Interactive - Cornven POS',
+    startDate: 'February 2026',
+    endDate: 'June 2026',
+    description:
+      'Extended a full-stack POS and rental-management platform from in-store operations into connected online selling for an artist cube store.',
+    highlights: [
+      'Integrated Shopify publishing, order/refund webhooks, sync logs, and inventory updates for online sales.',
+      'Built Stripe subscription gating for Shopify access with admin controls and lifecycle notifications.',
+      'Implemented product re-approval so live listings stay active while tenant edits await review.',
+      'Improved inventory reliability across POS and Shopify with transactional updates and failure logging.',
+      'Enhanced tenant and admin workflows for products, rentals, support messages, variants, and images.',
+      'Owned deployment setup, backend server configuration, database reset/migration, and domain configuration.',
+    ],
+    details: [
+      'Shopify', 'Stripe', 'React', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 
+    ]
+  },
+  {
   title : 'Associate Engineer',
   company : 'Cygnet Digital',
   startDate: 'September 2023',
@@ -107,6 +126,14 @@ const projects = [
   //   livePreview: process.env.REACT_APP_TEXTUTILSURL
   // },
   {
+    name: 'Brief - Personalized News',
+    description:
+      'Personalized, multi-source news aggregator that collects, cleans, deduplicates, clusters, and tags stories from RSS and different news sources. Uses Gemini AI for topic tagging and on-demand article summaries, with cached summaries shared across signed-in users. Learns from each user vote to update topic interests and rank a fresh, diverse feed by interest, freshness, and source variety.',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'NextAuth', 'Gemini AI', 'GitHub Actions'],
+    sourceCode: 'https://github.com/krn1904/News-Aggregator',
+    livePreview: process.env.REACT_APP_BRIEFURL
+  },
+  {
     name: 'Artify - Custom Artwork Marketplace',
     description:
       'Full-stack marketplace platform enabling artists to showcase portfolios and customers to commission custom artwork. Implements role-based authentication, paginated artwork browsing with tag filtering, favorites system, and complete commission lifecycle management from request to completion with status notifications.',
@@ -141,20 +168,58 @@ const projects = [
 ]
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'vueJs',
-  'NodeJs',
-  'AWS',
-  'HTML',
-  'CSS',
-  'Postgres',
-  'TypeORM',
-  'java',
-  'Blockchain'
+  {
+    category: 'Languages & Frameworks',
+    sections: [
+      {
+        label: 'Languages',
+        items: ['JavaScript', 'TypeScript', 'Java', 'Python'],
+      },
+      {
+        label: 'Frameworks',
+        items: ['React', 'Vue.js', 'Next.js', 'Node.js', 'Express.js', 'Vite', 'React Native', 'Bootstrap'],
+      },
+    ],
+  },
+  {
+    category: 'Data & Infrastructure',
+    sections: [
+      {
+        label: 'Database',
+        items: ['PostgreSQL', 'MongoDB', 'DynamoDB', 'Drizzle ORM'],
+      },
+      {
+        label: 'Cloud & DevOps',
+        items: ['AWS', 'S3', 'ECS Fargate', 'EC2', 'ECR', 'Docker', 'Vercel', 'Render', 'GitHub Actions'],
+      },
+    ],
+  },
+  {
+    category: 'APIs & Tools',
+    sections: [
+      {
+        label: 'APIs, Auth & Payments',
+        items: ['REST APIs', 'WebSockets', 'JWT', 'NextAuth', 'Stripe', 'Shopify'],
+      },
+      {
+        label: 'Tools',
+        items: ['Git', 'GitHub', 'Sourcetree'],
+      },
+    ],
+  },
+  {
+    category: 'AI & Tooling',
+    sections: [
+      {
+        label: 'AI Tools',
+        items: ['Gemini AI', 'Cursor', 'Claude', 'ChatGPT', 'GitHub Copilot'],
+      },
+      {
+        label: 'AI Coding Agents',
+        items: ['Claude Code', 'Codex'],
+      },
+    ],
+  },
 ]
 
 const contact = {

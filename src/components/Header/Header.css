@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(1100px, calc(100% - 3rem));
+  width: min(var(--layout-max-width), calc(100% - var(--layout-gutter)));
   margin: 0 auto;
   padding: 1.1rem 1.75rem;
   border-radius: 999px;
