@@ -24,10 +24,10 @@ const about = {
 
 const experiences = [
   {
-    title : 'Software Developer Intern',
-    company : 'Cornven POS · Capstone Project',
-    startDate: 'February 2025',
-    endDate: 'June 2025',
+    title : 'Software Developer',
+    company : 'Vision Verse Interactive - Cornven POS',
+    startDate: 'February 2026',
+    endDate: 'June 2026',
     description:
       'Extended a full-stack POS and rental-management platform from in-store operations into connected online selling for an artist cube store.',
     highlights: [
@@ -186,7 +186,7 @@ const skills = [
     sections: [
       {
         label: 'Database',
-        items: ['PostgreSQL', 'MongoDB', 'DynamoDB'],
+        items: ['PostgreSQL', 'MongoDB', 'DynamoDB', 'Drizzle ORM'],
       },
       {
         label: 'Cloud & DevOps',
@@ -198,8 +198,8 @@ const skills = [
     category: 'APIs & Tools',
     sections: [
       {
-        label: 'APIs & Auth',
-        items: ['REST APIs', 'WebSockets', 'JWT'],
+        label: 'APIs, Auth & Payments',
+        items: ['REST APIs', 'WebSockets', 'JWT', 'NextAuth', 'Stripe', 'Shopify'],
       },
       {
         label: 'Tools',
@@ -212,7 +212,7 @@ const skills = [
     sections: [
       {
         label: 'AI Tools',
-        items: ['Cursor', 'Claude', 'ChatGPT', 'GitHub Copilot'],
+        items: ['Gemini AI', 'Cursor', 'Claude', 'ChatGPT', 'GitHub Copilot'],
       },
       {
         label: 'AI Coding Agents',
