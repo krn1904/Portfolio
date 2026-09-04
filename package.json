@@ -65,5 +65,24 @@
     "@babel/plugin-transform-class-properties": "^7.22.5",
     "@babel/plugin-transform-private-methods": "^7.22.5",
     "@babel/plugin-transform-numeric-separator": "^7.22.5"
+  },
+  "overrides": {
+    "form-data": "3.0.5",
+    "shell-quote": "1.10.0",
+    "websocket-driver": "0.7.5",
+    "node-forge": "1.4.0",
+    "lodash": "4.18.1",
+    "fast-uri": "3.1.7",
+    "nanoid": "3.3.18",
+    "picomatch": "2.3.2",
+    "flatted": "3.4.4",
+    "browserslist": "4.28.8",
+    "rollup": "2.80.0",
+    "underscore": "1.13.8",
+    "path-to-regexp": "0.1.13",
+    "postcss": "8.5.28",
+    "resolve-url-loader": {
+      "postcss": "7.0.39"
+    }
   }
 }
