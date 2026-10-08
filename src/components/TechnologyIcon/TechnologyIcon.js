@@ -28,7 +28,10 @@ import {
   SiRender,
   SiShopify,
   SiSourcetree,
+  SiStreamlit,
   SiStripe,
+  SiSupabase,
+  SiTailwindcss,
   SiTelegram,
   SiTypeorm,
   SiTypescript,
@@ -38,7 +41,7 @@ import {
   SiZod,
 } from 'react-icons/si'
 import { TbBrandOpenai } from 'react-icons/tb'
-import { LuBlocks, LuBraces, LuCloud, LuCodeXml, LuContainer, LuNetwork, LuShieldCheck } from 'react-icons/lu'
+import { LuBlocks, LuBraces, LuCloud, LuCodeXml, LuContainer, LuDatabase, LuFileSearch, LuNetwork, LuScanText, LuShieldCheck } from 'react-icons/lu'
 import dynamoDbLogo from '../../assets/technology-icons/Arch_Amazon-DynamoDB_32.svg'
 import ec2Logo from '../../assets/technology-icons/Arch_Amazon-EC2_32.svg'
 import ecsLogo from '../../assets/technology-icons/Arch_Amazon-Elastic-Container-Service_32.svg'
@@ -50,6 +53,7 @@ import './TechnologyIcon.css'
 const technologyIconMap = {
   AWS: LuCloud,
   'AWS IAM': iamLogo,
+  'AWS Textract': LuScanText,
   Android: SiAndroidstudio,
   'Android-Studio': SiAndroidstudio,
   Axios: SiAxios,
@@ -57,6 +61,7 @@ const technologyIconMap = {
   Claude: SiClaude,
   'Claude Code': SiClaudecode,
   Bootstrap: SiBootstrap,
+  ChromaDB: LuDatabase,
   Blockchain: LuBlocks,
   Codex: TbBrandOpenai,
   CSS: SiCss,
@@ -88,6 +93,7 @@ const technologyIconMap = {
   PostgreSQL: SiPostgresql,
   Python: SiPython,
   'Radix UI': SiRadixui,
+  RAG: LuFileSearch,
   React: SiReact,
   'React Hook Form': SiReacthookform,
   'React Native': SiReact,
@@ -96,7 +102,10 @@ const technologyIconMap = {
   Render: SiRender,
   Shopify: SiShopify,
   Sourcetree: SiSourcetree,
+  Streamlit: SiStreamlit,
   Stripe: SiStripe,
+  Supabase: SiSupabase,
+  'Tailwind CSS': SiTailwindcss,
   'Telegram Bot API': SiTelegram,
   TypeORM: SiTypeorm,
   TypeScript: SiTypescript,

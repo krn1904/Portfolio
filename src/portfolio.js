@@ -126,6 +126,22 @@ const projects = [
   //   livePreview: process.env.REACT_APP_TEXTUTILSURL
   // },
   {
+    name: 'ShelfLife - Retail Expiry Tracking',
+    description:
+      'Multi-tenant back-of-house app for convenience stores that tracks deliveries and expiry dates so stock is sold or cleared before it is written off. Staff photograph the supplier docket and AWS Textract reads it, matching the supplier by ABN and turning printed lines into a checklist with proposed expiry dates. A nightly Supabase Edge Function on a pg_cron schedule recomputes reminders for every batch, staged by shelf life on arrival: early check, half price, then last-day pull. Postgres row-level security isolates each organisation, proven by a dedicated RLS test suite that runs in GitHub Actions CI alongside lint, unit tests, build and typecheck.',
+    stack: ['Next.js', 'React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'AWS Textract', 'GitHub Actions'],
+    sourceCode: 'https://github.com/krn1904/shelflife',
+    livePreview: process.env.REACT_APP_SHELFLIFEURL || 'https://shelflife-alpha.vercel.app'
+  },
+  {
+    name: 'Persona Chatbot - Chat With Your Documents',
+    description:
+      'Persona-driven RAG chatbot that answers questions from your own documents, with switchable characters such as a tutor, code reviewer or coach. Documents are chunked, embedded with Gemini and stored in a Chroma vector index, so answers are retrieved from the relevant passages and cite their sources. Users can upload their own PDFs or text files in a session-only store that takes priority over each persona\'s built-in knowledge. Guardrails treat uploads as data rather than instructions to resist prompt injection, and fall back to general knowledge when a question is off-topic. One shared engine powers both a command-line tool and a Streamlit web app on the Gemini free tier.',
+    stack: ['Python', 'Gemini AI', 'RAG', 'ChromaDB', 'Streamlit'],
+    sourceCode: 'https://github.com/krn1904/AI-chatbot-personas',
+    livePreview: process.env.REACT_APP_PERSONAURL
+  },
+  {
     name: 'Brief - Personalized News',
     description:
       'Personalized, multi-source news aggregator that collects, cleans, deduplicates, clusters, and tags stories from RSS and different news sources. Uses Gemini AI for topic tagging and on-demand article summaries, with cached summaries shared across signed-in users. Learns from each user vote to update topic interests and rank a fresh, diverse feed by interest, freshness, and source variety.',
@@ -142,22 +158,6 @@ const projects = [
     livePreview: process.env.REACT_APP_ARTIFYURL
   },
   {
-    name: 'Real-Time Chat Application',
-    description:
-      'Full-stack WebSocket chat app with room-based messaging, live connection status, and session-based message history. Features React frontend with custom hooks for connection management, Node.js/Express backend with WebSocket server, and automatic reconnection with message queuing.',
-    stack: ['React', 'Node.js', 'Express', 'WebSocket', 'MongoDB', 'Bootstrap'],
-    sourceCode: 'https://github.com/krn1904/Chat-app',
-    livePreview: process.env.REACT_APP_CHATAPPFEURL
-  },
-  {
-    name: 'Work Hours Bot',
-    description:
-      'A Telegram bot for tracking work hours with natural language parsing. Supports bi-weekly pay cycles, category tracking, pay rate calculations, and automated daily reminders. Built for serverless deployment on Vercel with MongoDB backend.',
-    stack: ['Node.js', 'MongoDB', 'Telegram Bot API', 'Vercel', 'GitHub Actions'],
-    sourceCode: 'https://github.com/krn1904/workHoursBot',
-    // livePreview: process.env.TELEGRAM_BOT_USERNAME || '@your_work_hours_bot'
-  },
-  {
     name: 'Music Subscription Platform - AWS',
     description:
       'A music subscription REST API deployed across three AWS architectures - EC2 (Nginx + PM2), ECS Fargate (Docker + ALB), and Lambda + API Gateway — covering IaaS, containerised, and serverless models. Features DynamoDB schema with composite sort keys, GSI and LSI, IAM least-privilege roles, and presigned URL access for private S3 assets.',
@@ -165,6 +165,23 @@ const projects = [
     sourceCode: 'https://github.com/krn1904/music-backend',
     // livePreview: 'your-deployed-url-here'
   }
+  // removed to keep the list focused on the strongest recent work; restore if needed
+  // {
+  //   name: 'Real-Time Chat Application',
+  //   description:
+  //     'Full-stack WebSocket chat app with room-based messaging, live connection status, and session-based message history. Features React frontend with custom hooks for connection management, Node.js/Express backend with WebSocket server, and automatic reconnection with message queuing.',
+  //   stack: ['React', 'Node.js', 'Express', 'WebSocket', 'MongoDB', 'Bootstrap'],
+  //   sourceCode: 'https://github.com/krn1904/Chat-app',
+  //   livePreview: process.env.REACT_APP_CHATAPPFEURL
+  // },
+  // {
+  //   name: 'Work Hours Bot',
+  //   description:
+  //     'A Telegram bot for tracking work hours with natural language parsing. Supports bi-weekly pay cycles, category tracking, pay rate calculations, and automated daily reminders. Built for serverless deployment on Vercel with MongoDB backend.',
+  //   stack: ['Node.js', 'MongoDB', 'Telegram Bot API', 'Vercel', 'GitHub Actions'],
+  //   sourceCode: 'https://github.com/krn1904/workHoursBot',
+  //   // livePreview: process.env.TELEGRAM_BOT_USERNAME || '@your_work_hours_bot'
+  // },
 ]
 
 const skills = [
