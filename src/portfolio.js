@@ -126,6 +126,22 @@ const projects = [
   //   livePreview: process.env.REACT_APP_TEXTUTILSURL
   // },
   {
+    name: 'ShelfLife - Retail Expiry Tracking',
+    description:
+      'Multi-tenant back-of-house platform for convenience retail that stops stock expiring unnoticed. Staff photograph the delivery docket and OCR turns it into intake lines matched to the supplier and catalogue. A nightly Edge Function on pg_cron generates half-price and last-day reminders from each batch\'s shelf life. Four roles are isolated with Postgres row-level security, verified by an automated cross-organisation test in CI.',
+    stack: ['Next.js', 'React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'AWS Textract', 'GitHub Actions'],
+    sourceCode: 'https://github.com/krn1904/shelflife',
+    livePreview: process.env.REACT_APP_SHELFLIFEURL
+  },
+  {
+    name: 'Persona Chatbot - Chat With Your Documents',
+    description:
+      'Persona-driven RAG chatbot that answers questions from your own documents and cites its sources. Each persona (tutor, code reviewer, interview coach) is a swappable prompt file with its own knowledge base, chunked and embedded into a Chroma vector index. Users can upload PDFs or text files for the session, which take priority over the persona\'s built-in documents. Guardrails fall back to "I don\'t know" when nothing relevant is found and treat uploaded files as data, not instructions. One shared engine powers both a command-line tool and a Streamlit web app on Gemini\'s free tier.',
+    stack: ['Python', 'Gemini AI', 'RAG', 'ChromaDB', 'Embeddings', 'Streamlit'],
+    sourceCode: 'https://github.com/krn1904/AI-chatbot-personas',
+    livePreview: process.env.REACT_APP_PERSONACHATBOTURL
+  },
+  {
     name: 'Brief - Personalized News',
     description:
       'Personalized, multi-source news aggregator that collects, cleans, deduplicates, clusters, and tags stories from RSS and different news sources. Uses Gemini AI for topic tagging and on-demand article summaries, with cached summaries shared across signed-in users. Learns from each user vote to update topic interests and rank a fresh, diverse feed by interest, freshness, and source variety.',
